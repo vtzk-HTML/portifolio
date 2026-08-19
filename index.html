@@ -1,0 +1,1314 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vitor Lima | Portfólio</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #0d0d0d;
+            color: #f5f5f5;
+            line-height: 1.6;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 40px 20px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #0d0d0d,
+                    #171717
+                );
+        }
+
+        .hero {
+            max-width: 850px;
+        }
+
+        .hero h1 {
+
+            font-size:
+                clamp(
+                    45px,
+                    8vw,
+                    80px
+                );
+
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: #4da6ff;
+        }
+
+        .hero p {
+
+            color: #bdbdbd;
+
+            font-size: 20px;
+
+            max-width: 700px;
+
+            margin: auto;
+        }
+
+
+        /* =========================
+           BOTÕES
+        ========================= */
+
+        .buttons {
+            margin-top: 30px;
+        }
+
+        .buttons a {
+
+            display: inline-block;
+
+            padding: 12px 22px;
+
+            margin: 5px;
+
+            border:
+                1px solid
+                #4da6ff;
+
+            border-radius: 8px;
+
+            color: white;
+
+            text-decoration: none;
+
+            transition: 0.3s;
+        }
+
+        .buttons a:hover {
+
+            background: #4da6ff;
+
+            color: #000;
+        }
+
+
+        /* =========================
+           MENU
+        ========================= */
+
+        nav {
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 10;
+
+            background: #111;
+
+            border-bottom:
+                1px solid
+                #292929;
+
+            padding: 15px;
+
+            text-align: center;
+        }
+
+        nav a {
+
+            color: #ddd;
+
+            text-decoration: none;
+
+            margin: 0 10px;
+
+            font-size: 14px;
+
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #4da6ff;
+        }
+
+
+        /* =========================
+           SEÇÕES
+        ========================= */
+
+        section {
+
+            max-width: 1100px;
+
+            margin: auto;
+
+            padding: 80px 20px;
+        }
+
+        section h2 {
+
+            font-size: 34px;
+
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+
+            color: #999;
+
+            margin-bottom: 35px;
+        }
+
+
+        /* =========================
+           CARDS
+        ========================= */
+
+        .card {
+
+            background: #161616;
+
+            border:
+                1px solid
+                #292929;
+
+            border-radius: 14px;
+
+            padding: 25px;
+
+            transition: 0.3s;
+        }
+
+        .card:hover {
+
+            transform:
+                translateY(-5px);
+
+            border-color:
+                #4da6ff;
+        }
+
+        .card h3 {
+
+            color: #4da6ff;
+
+            margin-bottom: 12px;
+        }
+
+
+        /* =========================
+           SOBRE
+        ========================= */
+
+        .about {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 25px;
+        }
+
+
+        /* =========================
+           HABILIDADES
+        ========================= */
+
+        .skills {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+        .skill {
+
+            background: #161616;
+
+            border:
+                1px solid
+                #292929;
+
+            border-radius: 14px;
+
+            padding: 25px;
+
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+
+            transform:
+                translateY(-5px);
+
+            border-color:
+                #4da6ff;
+        }
+
+        .skill h3 {
+            margin-bottom: 10px;
+        }
+
+
+        /* =========================
+           PROJETOS
+        ========================= */
+
+        .projects {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 25px;
+        }
+
+        .project {
+
+            background: #161616;
+
+            border:
+                1px solid
+                #292929;
+
+            border-radius: 14px;
+
+            padding: 28px;
+
+            transition: 0.3s;
+        }
+
+        .project:hover {
+
+            transform:
+                translateY(-5px);
+
+            border-color:
+                #4da6ff;
+        }
+
+        .project h3 {
+
+            color: #4da6ff;
+
+            margin-bottom: 12px;
+        }
+
+        .project h4 {
+
+            margin-top: 20px;
+
+            margin-bottom: 10px;
+
+            color: #ddd;
+        }
+
+        .project ul {
+
+            list-style: none;
+
+            padding: 0;
+
+            margin-bottom: 15px;
+        }
+
+        .project li {
+
+            color: #aaa;
+
+            margin: 6px 0;
+
+            font-size: 14px;
+        }
+
+        .project li::before {
+
+            content: "• ";
+
+            color: #4da6ff;
+        }
+
+
+        /* =========================
+           TAGS
+        ========================= */
+
+        .tag {
+
+            display: inline-block;
+
+            margin-top: 10px;
+
+            margin-right: 5px;
+
+            padding: 5px 10px;
+
+            border-radius: 20px;
+
+            background: #252525;
+
+            color: #bbb;
+
+            font-size: 12px;
+        }
+
+
+        /* =========================
+           LINK PROJETO
+        ========================= */
+
+        .project-link {
+
+            display: inline-block;
+
+            margin-top: 20px;
+
+            padding: 9px 16px;
+
+            border-radius: 7px;
+
+            background: #4da6ff;
+
+            color: #000;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .project-link:hover {
+            background: white;
+        }
+
+
+        /* =========================
+           ESTUDOS
+        ========================= */
+
+        .timeline {
+
+            border-left:
+                2px solid
+                #4da6ff;
+
+            padding-left: 25px;
+        }
+
+        .timeline-item {
+
+            margin-bottom: 30px;
+        }
+
+        .timeline-item h3 {
+
+            color: #4da6ff;
+
+            margin-bottom: 5px;
+        }
+
+
+        /* =========================
+           CURRÍCULO
+        ========================= */
+
+        .resume {
+
+            text-align: center;
+        }
+
+        .resume p {
+
+            max-width: 700px;
+
+            margin:
+                0 auto 20px auto;
+
+            color: #aaa;
+        }
+
+        .resume-buttons {
+            margin-top: 25px;
+        }
+
+        .resume-button {
+
+            display: inline-block;
+
+            padding: 13px 25px;
+
+            margin: 5px;
+
+            background: #4da6ff;
+
+            color: #000;
+
+            border-radius: 8px;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .resume-button:hover {
+            background: white;
+        }
+
+
+        /* =========================
+           CONTATO
+        ========================= */
+
+        .contact {
+            text-align: center;
+        }
+
+        .email {
+
+            display: inline-block;
+
+            color: #4da6ff;
+
+            font-size: 19px;
+
+            text-decoration: none;
+
+            margin-top: 5px;
+        }
+
+        .email:hover {
+            text-decoration: underline;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+
+            text-align: center;
+
+            padding: 30px;
+
+            border-top:
+                1px solid
+                #292929;
+
+            color: #777;
+        }
+
+
+        /* =========================
+           RESPONSIVO
+        ========================= */
+
+        @media (max-width: 750px) {
+
+            .about,
+            .skills,
+            .projects {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+            nav a {
+
+                margin:
+                    0 5px;
+            }
+
+            .hero p {
+
+                font-size: 17px;
+            }
+
+            section {
+
+                padding:
+                    60px 20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         INÍCIO
+    ========================= -->
+
+    <header id="inicio">
+
+        <div class="hero">
+
+            <h1>
+                Vitor <span>Lima</span>
+            </h1>
+
+            <p>
+                Estudante, desenvolvedor e entusiasta de tecnologia,
+                aviação e aprendizado. Gosto de transformar ideias
+                em projetos e desenvolver novas habilidades através
+                da prática.
+            </p>
+
+
+            <div class="buttons">
+
+                <a href="#sobre">
+                    Sobre mim
+                </a>
+
+                <a href="#projetos">
+                    Projetos
+                </a>
+
+                <a href="#curriculo">
+                    Currículo
+                </a>
+
+                <a href="#contato">
+                    Contato
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         MENU
+    ========================= -->
+
+    <nav>
+
+        <a href="#inicio">
+            Início
+        </a>
+
+        <a href="#sobre">
+            Sobre
+        </a>
+
+        <a href="#habilidades">
+            Habilidades
+        </a>
+
+        <a href="#projetos">
+            Projetos
+        </a>
+
+        <a href="#estudos">
+            Estudos
+        </a>
+
+        <a href="#curriculo">
+            Currículo
+        </a>
+
+        <a href="#contato">
+            Contato
+        </a>
+
+    </nav>
+
+
+    <!-- =========================
+         SOBRE
+    ========================= -->
+
+    <section id="sobre">
+
+        <h2>
+            Sobre mim
+        </h2>
+
+        <p class="subtitle">
+            Um pouco sobre quem sou e o que gosto de fazer.
+        </p>
+
+
+        <div class="about">
+
+
+            <div class="card">
+
+                <h3>
+                    Quem sou
+                </h3>
+
+                <p>
+                    Sou estudante do ensino médio técnico em
+                    Desenvolvimento de Sistemas e tenho interesse
+                    em diferentes áreas da tecnologia e do conhecimento.
+                </p>
+
+                <br>
+
+                <p>
+                    Gosto de aprender na prática, testar ideias,
+                    desenvolver projetos e entender como as coisas
+                    funcionam.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    Meus interesses
+                </h3>
+
+                <p>
+                    Meus principais interesses estão relacionados
+                    a programação, computadores, tecnologia,
+                    aviação, simuladores e aprendizado contínuo.
+                </p>
+
+                <br>
+
+                <p>
+                    Busco desenvolver diferentes habilidades sem
+                    ficar limitado a uma única área.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         HABILIDADES
+    ========================= -->
+
+    <section id="habilidades">
+
+        <h2>
+            Habilidades e interesses
+        </h2>
+
+        <p class="subtitle">
+            Áreas que fazem parte da minha formação e dos meus estudos.
+        </p>
+
+
+        <div class="skills">
+
+
+            <div class="skill">
+
+                <h3>
+                    💻 Tecnologia
+                </h3>
+
+                <p>
+                    Desenvolvimento de sistemas, computadores,
+                    hardware, sistemas operacionais e resolução
+                    de problemas técnicos.
+                </p>
+
+            </div>
+
+
+            <div class="skill">
+
+                <h3>
+                    🧑‍💻 Programação
+                </h3>
+
+                <p>
+                    Conhecimentos em HTML, CSS, C++, JavaScript
+                    e lógica computacional, além de projetos
+                    próprios para praticar.
+                </p>
+
+            </div>
+
+
+            <div class="skill">
+
+                <h3>
+                    ✈️ Aviação
+                </h3>
+
+                <p>
+                    Estudos relacionados à teoria de voo,
+                    aerodinâmica, navegação, meteorologia
+                    e fundamentos da aviação.
+                </p>
+
+            </div>
+
+
+            <div class="skill">
+
+                <h3>
+                    📚 Aprendizado
+                </h3>
+
+                <p>
+                    Gosto de estudar através de livros, aulas,
+                    simulados, projetos e experiências práticas.
+                </p>
+
+            </div>
+
+
+            <div class="skill">
+
+                <h3>
+                    🎮 Simulação
+                </h3>
+
+                <p>
+                    Interesse em simuladores de voo e jogos
+                    como ferramentas de aprendizado e prática.
+                </p>
+
+            </div>
+
+
+            <div class="skill">
+
+                <h3>
+                    🔧 Hardware
+                </h3>
+
+                <p>
+                    Montagem, manutenção, otimização e estudo
+                    de componentes de computadores.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROJETOS
+    ========================= -->
+
+    <section id="projetos">
+
+        <h2>
+            Projetos
+        </h2>
+
+        <p class="subtitle">
+            Projetos desenvolvidos para transformar conhecimento
+            em experiências práticas.
+        </p>
+
+
+        <div class="projects">
+
+
+            <!-- PLATAFORMA DE ESTUDOS -->
+
+            <div class="project">
+
+                <h3>
+                    📚 Plataforma de Estudos
+                </h3>
+
+                <p>
+                    Plataforma criada para auxiliar na organização
+                    e preparação para estudos através de questões,
+                    materiais e acompanhamento de desempenho.
+                </p>
+
+
+                <h4>
+                    Conceitos aplicados:
+                </h4>
+
+
+                <ul>
+
+                    <li>
+                        Banco de questões
+                    </li>
+
+                    <li>
+                        Sistema de pontuação e porcentagem
+                    </li>
+
+                    <li>
+                        Organização de materiais de estudo
+                    </li>
+
+                    <li>
+                        Sistema de simulados
+                    </li>
+
+                    <li>
+                        Manipulação e organização de dados
+                    </li>
+
+                    <li>
+                        Interface responsiva
+                    </li>
+
+                </ul>
+
+
+                <span class="tag">
+                    HTML
+                </span>
+
+                <span class="tag">
+                    CSS
+                </span>
+
+                <span class="tag">
+                    JavaScript
+                </span>
+
+
+                <br>
+
+
+                <a
+                    class="project-link"
+                    href="https://plataforma-simulado.vercel.app"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    Ver projeto →
+
+                </a>
+
+            </div>
+
+
+            <!-- WAR THUNDER 2D -->
+
+            <div class="project">
+
+                <h3>
+                    🎮 War Thunder 2D
+                </h3>
+
+                <p>
+                    Jogo 2D desenvolvido como projeto de programação,
+                    utilizando conceitos de lógica, interação com o
+                    usuário e desenvolvimento de mecânicas de jogos.
+                </p>
+
+
+                <h4>
+                    Conceitos aplicados:
+                </h4>
+
+
+                <ul>
+
+                    <li>
+                        Sistema de movimentação
+                    </li>
+
+                    <li>
+                        Mecânicas de combate
+                    </li>
+
+                    <li>
+                        Detecção de colisões
+                    </li>
+
+                    <li>
+                        Lógica de jogo
+                    </li>
+
+                    <li>
+                        Controle através do teclado
+                    </li>
+
+                    <li>
+                        Atualização dinâmica dos elementos
+                    </li>
+
+                </ul>
+
+
+                <span class="tag">
+                    JavaScript
+                </span>
+
+                <span class="tag">
+                    HTML
+                </span>
+
+                <span class="tag">
+                    Game
+                </span>
+
+
+                <br>
+
+
+                <a
+                    class="project-link"
+                    href="https://warthunder2d.vercel.app"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    Jogar projeto →
+
+                </a>
+
+            </div>
+
+
+            <!-- AVIAÇÃO -->
+
+            <div class="project">
+
+                <h3>
+                    ✈️ Estudos de Aviação
+                </h3>
+
+                <p>
+                    Estudos independentes sobre teoria de voo e
+                    fundamentos da aviação utilizando livros,
+                    videoaulas, simuladores e questões de treinamento.
+                </p>
+
+
+                <span class="tag">
+                    Aviação
+                </span>
+
+                <span class="tag">
+                    Estudo
+                </span>
+
+                <span class="tag">
+                    Simulação
+                </span>
+
+            </div>
+
+
+            <!-- TECNOLOGIA -->
+
+            <div class="project">
+
+                <h3>
+                    🔧 Projetos de Tecnologia
+                </h3>
+
+                <p>
+                    Experimentos envolvendo computadores, hardware,
+                    programação e diferentes tecnologias como forma
+                    de desenvolver conhecimentos práticos.
+                </p>
+
+
+                <span class="tag">
+                    Tecnologia
+                </span>
+
+                <span class="tag">
+                    Hardware
+                </span>
+
+                <span class="tag">
+                    Programação
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ESTUDOS
+    ========================= -->
+
+    <section id="estudos">
+
+        <h2>
+            Formação e estudos
+        </h2>
+
+        <p class="subtitle">
+            Minha trajetória de aprendizado.
+        </p>
+
+
+        <div class="timeline">
+
+
+            <div class="timeline-item">
+
+                <h3>
+                    Ensino Médio Técnico
+                </h3>
+
+                <p>
+                    Formação técnica em Desenvolvimento de Sistemas,
+                    estudando programação, lógica, computação e
+                    desenvolvimento de aplicações.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <h3>
+                    Programação
+                </h3>
+
+                <p>
+                    Estudos e cursos complementares em programação,
+                    incluindo Java, C++, HTML, CSS e lógica da
+                    programação. 
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <h3>
+                    Aviação
+                </h3>
+
+                <p>
+                    Estudos independentes sobre teoria de voo e
+                    fundamentos da aviação, utilizando livros,
+                    videoaulas, simuladores e questões de treinamento.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <h3>
+                    Aprendizado contínuo
+                </h3>
+
+                <p>
+                    Continuo buscando novas áreas para aprender
+                    e transformar conhecimento em projetos e
+                    experiências práticas.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CURRÍCULO
+    ========================= -->
+
+    <section id="curriculo">
+
+        <div class="resume">
+
+            <h2>
+                Meu Currículo
+            </h2>
+
+            <p class="subtitle">
+                Formação, experiências, habilidades e certificações.
+            </p>
+
+
+            <div class="card">
+
+                <h3>
+                    Currículo profissional
+                </h3>
+
+                <p>
+                    Meu currículo apresenta minha formação em
+                    Desenvolvimento de Sistemas, conhecimentos em
+                    programação, hardware e software, além de
+                    experiências profissionais e certificações.
+                </p>
+
+
+                <div class="resume-buttons">
+
+                    <a
+                        class="resume-button"
+                        href="Curriculo.pdf"
+                        target="_blank">
+
+                        📄 Visualizar currículo
+
+                    </a>
+
+
+                    <a
+                        class="resume-button"
+                        href="Curriculo.pdf"
+                        download>
+
+                        ⬇️ Baixar currículo
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTATO
+    ========================= -->
+
+    <section id="contato">
+
+        <div class="contact">
+
+            <h2>
+                Contato
+            </h2>
+
+            <p class="subtitle">
+                Quer entrar em contato? Estou disponível por e-mail.
+            </p>
+
+
+            <a
+                class="email"
+                href="mailto:viitor.lf@gmail.com">
+
+                viitor.lf@gmail.com
+
+            </a>
+
+
+            <div class="buttons">
+
+                <a
+                    href="mailto:viitor.lf@gmail.com">
+
+                    Enviar e-mail
+
+                </a>
+
+
+                <a
+                    href="https://plataforma-simulado.vercel.app"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    Minha plataforma
+
+                </a>
+
+
+                <a
+                    href="https://warthunder2d.vercel.app"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    Meu jogo
+
+                </a>
+
+
+                <a
+                    href="Curriculo.pdf"
+                    target="_blank">
+
+                    Meu currículo
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         RODAPÉ
+    ========================= -->
+
+    <footer>
+
+        <p>
+            © 2026 Vitor Lima — Portfólio pessoal
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
+```
